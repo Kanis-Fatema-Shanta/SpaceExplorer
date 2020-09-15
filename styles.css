@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+/*Global styles*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* how we declare css variable */
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+}
+
+html{
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: #7d9db954;
+}
+
+
+section{
+    padding: 3.9rem 0;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.container{
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/*header*/
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+}
+
+/*signup option
+  .form-control{
+  height: 40px;
+  box-shadow: none;
+  color: #969fa4;
+}
+
+  .form-control, .btn{
+      border-radius: 3px;
+  }
+.signup-form{
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+  background-color: #7d9db954;
+}
+.signup-form h2{
+  color: #636363;
+      margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+  }
+.signup-form h2:before, .signup-form h2:after{
+  content: "";
+  height: 2px;
+  width: 30%;
+  background: #d4d4d4;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.signup-form h2:before{
+  left: 0;
+}
+.signup-form h2:after{
+  right: 0;
+}
+  .signup-form .hint-text{
+  color: #999;
+  margin-bottom: 30px;
+  text-align: center;
+}
+  .signup-form form{
+  color: #999;
+  border-radius: 3px;
+    margin-bottom: 15px;
+      background: #f2f3f7;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+  }
+.signup-form .form-group{
+  margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"]{
+  margin-top: 3px;
+}
+.signup-form .btn{
+      font-size: 16px;
+      font-weight: bold;
+  min-width: 140px;
+      outline: none !important;
+  }
+.signup-form .row div:first-child{
+  padding-right: 10px;
+}
+.signup-form .row div:last-child{
+  padding-left: 10px;
+}
+  .signup-form a{
+  color: #fff;
+  text-decoration: underline;
+}
+  .signup-form a:hover{
+  text-decoration: none;
+}
+.signup-form form a{
+  color: #5cb85c;
+  text-decoration: none;
+}
+.signup-form form a:hover{
+  text-decoration: underline;
+}
+
+.signup-form .message{
+  color: red;
+}*/
+
+/* update signup option */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+  color: #218865
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+
+.login-box .message{
+  color: red;
+}
+
+/* signup option ends */
+
+.logo{
+  width: 4.5%;
+    max-width: 50%;
+    margin: 0rem auto;
+}
+
+.nav{
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: fixed;
+  background: #051b2573;
+  background-image: url("images/nasahero.jpg");
+  /* opacity: 0.6; */
+  margin-left: -10rem;
+}
+
+.menu-toggle{
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.fa-times{
+    display: none;
+}
+
+.nav-list{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--main-font-color-dark);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform .5s;
+}
+
+.nav::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.open .fa-times{
+    display: block;
+}
+
+.open .fa-bars{
+    display: none;
+}
+
+.open .nav-list{
+    transform: translateX(0);
+}
+
+.open .nav::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item{
+    border-bottom: 2px solid rgba(255,255,255,.3);
+}
+
+.nav-link{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color .5s;
+}
+
+.nav-link:hover{
+    color: var(--secondary-font-color);
+}
+
+/*starting hero*/
+.hero{
+    margin: 7.2rem 0 0;
+    width: 100%;
+    height: 89vh;
+    /* background: url("images/nasahero.jpg") center repeat-x; */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: Hero 100s cubic-bezier(0.38, 0.58, 0.43, 0.74) infinite;
+
+}
+
+/*Animation for the slideshow images*/
+ @keyframes Hero {
+  0%,100%{
+    background-image: url("images/nasahero.jpg");
+  }
+  /* 20%{
+      background-image: url("images/nasahero2.jpg");
+
+  }
+  40%{
+      background-image: url("images/nasahero3.jpg");
+  }
+  50%{
+      background-image: url("images/nasahero4.jpg");
+  } */
+  50%{
+    background-image: url("images/nasahero5.jpg");
+  }
+}
+
+
+
+.sub-headline{
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+    /* margin-bottom: 1.0rem; */
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+    margin-bottom: 4.2rem;
+}
+
+.first-letter{
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headline{
+    color: #000;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+    animation: scale .5s forwards;
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 100%;
+    max-width: 8.4rem;
+    height: .25rem;
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+
+}
+
+.line-right::before,
+.line-left::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1.2s;
+}
+
+.line-right::before{
+    border-right-color: #fff;
+    right: 0;
+}
+
+.line-left::before{
+    border-left-color: #fff;
+    left: 0;
+}
+
+.asterisk{
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+    opacity: 0;
+    animation: spin .5s forwards;
+    animation-delay: .7s;
+}
+
+.single-animation{
+  opacity: 0;
+  animation: fadeDown .5s forwards;
+  animation-delay: 1.5s;
+}
+
+.headline-description h5{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-top: 1.0rem;
+}
+
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.cta-btn{
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: .9rem;
+    color: var(--body-font-color);
+    border-radius: .4rem;
+    transition: background-color .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus{
+    color: #fff;
+    background-color: var(--secondary-font-color);
+}
+
+
+/*  Discover Our Story */
+
+.global-headline{
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+.descover-our-story .global-headline{
+  margin-top: 6.9rem;
+}
+
+.global-headline .asterisk{
+  color: var(--body-font-color);
+  margin: 2.4rem 0;
+}
+
+.headline-dark{
+  color: var(--main-font-color-dark);
+  letter-spacing: .7rem;
+  margin-right: -.7rem;
+}
+
+.global-headline .sub-headline{
+  letter-spacing: -1px;
+  line-height: .42;
+}
+
+.restaurant-info{
+  text-align: center;
+}
+
+.restaurant-description{
+  margin-bottom: 3rem;
+}
+
+.restaurant-description p{
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.body-btn{
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition: color .5s;
+}
+
+.body-btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: background-color .5s;
+}
+
+
+.body-btn:hover,
+.body-btn:focus{
+  color: var(--main-font-color-dark);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before{
+  background-color: var(--main-font-color-dark);
+}
+
+
+/* Testful recipies */
+.testful-recipes{
+  background: url("images/nasa-worldview.gif") center no-repeat;
+  background-size: cover;
+}
+
+.between{
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Discover our menu */
+.image-group{
+
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem; */
+}
+
+.discover-our-menu .restaurant-description{
+  padding-top: 0rem;
+  margin-bottom: 3rem;
+}
+
+/* The perfect blen */
+.perfect-blend{
+  /* background: url("https://www.youtube.com/embed/tgbNymZ7vqY") center no-repeat;
+  background-size: cover;
+  margin: 0 0 12rem; */
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+}
+
+/* Footer */
+footer{
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.back-to-top{
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+
+}
+
+.back-to-top i{
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  animation: Up 2s infinite;
+}
+
+.footer-content{
+  overflow: hidden;
+}
+
+.footer-content h4{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+}
+
+.footer-content .asterisk{
+  margin: 1.4rem;
+}
+
+.footer-content-about{
+  margin-bottom: 5.4rem;
+}
+
+.footer-content-about p{
+  line-height: 2;
+}
+
+.social-icons{
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons i{
+  font-size: 2rem;
+  color: #fff;
+  padding: .8rem 2rem;
+  opacity: .5;
+  transition: color .5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus{
+  color:  var(--secondary-font-color);
+}
+
+.newsletter-form{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input{
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+.newsletter-btn{
+  background-color: transparent;
+  border: none;
+  color: var(--main-font-color-dark);
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1px .6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: -8px 0rem 0rem 18rem;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 900px) {
+  section{
+    padding: 7.9rem;
+  }
+
+  .logo{
+    weight: 7.5%;
+    max-width: 50%;
+    margin: 0rem 0rem 0rem 10rem;
+  }
+
+  .menu-toggle{
+    display: none;
+  }
+  .nav{
+    justify-content: space-between;
+  }
+
+  .nav-list{
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+    margin: 1rem 4rem;
+  }
+
+  .nav-item{
+    margin: 0 2.4rem;
+    border: none;
+  }
+
+  .nav-item:last-child{
+    margin-right: 0;
+  }
+
+  .nav-link{
+    font-size: 1.3rem;
+  }
+
+  .active{
+    position: relative;
+  }
+
+  .active::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .sub-headline{
+    font-size: 12.2rem;
+  }
+
+  .headline{
+    font-size: 4.7rem;
+    letter-spacing: .8rem;
+
+  }
+
+  .line{
+    max-width: 11.4rem;
+  }
+
+  .restaurant-info{
+    display: flex;
+    align-items: center;
+  }
+
+  .restaurant-info > div{
+    flex: 1;
+  }
+
+  .login-box{
+    text-align: center;
+    position: relative;
+  }
+
+  .left{
+    position: absolute;
+    text-align: center;
+  }
+
+  .right{
+    text-align: center;
+    position: absolute;
+  }
+
+  .padding-right{
+    padding-right: 7rem;
+
+  }
+
+  .footer-content{
+    max-width: 77.5rem;
+    margin: auto;
+  }
+
+  .footer-content-about{
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+
+  }
+
+  /* .footer-content-divider{
+    display: flex;
+    justify-content: space-between;
+
+  } */
+
+  .social-media
+  .newsLetter-form{
+    width: 100%;
+    max-width: 27.3rem;
+    margin: 0 1rem;
+  }
+
+  .social-icons i{
+    opacity: 1;
+  }
+
+  .newsletter-btn{
+    margin: -8px 0rem 0rem 18rem;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeUp {
+  0%{
+    transform: translateY(4rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0%{
+    transform: scale(2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0%{
+    width: 0;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes fadeDown {
+  0%{
+    transform: translateY(-1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes Up {
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
