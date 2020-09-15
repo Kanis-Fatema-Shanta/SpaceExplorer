@@ -9,15 +9,15 @@
       </div>
 
         <!--Navigation Bar logo-->
-      <a href="aboveearth.php" class="logo"><img src="images/nasalogo.png" alt=""></a>
+      <a href="index.html" class="logo"><img src="images/nasalogo.png" alt=""></a>
 
         <!--Navigation Bar Lists e.g. menu, home etc-->
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="aboveearth.php" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="aboveearth.php#quiz" class="nav-link">Quiz</a>
+          <a href="index.html#quiz" class="nav-link">Quiz</a>
         </li>
         <li class="nav-item">
           <a href="#learn" class="nav-link">Learn</a>
